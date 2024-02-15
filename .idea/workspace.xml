@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73a6f9bc-ade4-4e74-946a-f85aabbcde76" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_10_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Socket-Transmision.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/File.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/JsonClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/JsonMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/JsonServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JsonServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JsonServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +57,7 @@
       <recent name="C:\Users\ADMIN\Documents\Intellj Project\6 Semestre\Socket-Transmision\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.JsonClient">
+  <component name="RunManager" selected="Application.JsonServer">
     <configuration name="JsonClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="JsonClient" />
       <module name="Socket-Transmision" />
@@ -85,8 +74,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JsonClient" />
         <item itemvalue="Application.JsonServer" />
+        <item itemvalue="Application.JsonClient" />
       </list>
     </recent_temporary>
   </component>
@@ -98,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1708028560051</updated>
-      <workItem from="1708028561093" duration="4699000" />
+      <workItem from="1708028561093" duration="6200000" />
     </task>
     <servers />
   </component>
@@ -110,7 +99,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/JsonServer.java</url>
-          <line>14</line>
+          <line>13</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

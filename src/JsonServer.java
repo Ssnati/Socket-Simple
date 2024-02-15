@@ -2,7 +2,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Arrays;
 
 public class JsonServer {
     public static void main(String[] args) {
@@ -14,6 +13,7 @@ public class JsonServer {
             while (true) {
                 Socket clientSocket = serverSocket.accept();
                 System.out.println("Cliente conectado desde " + clientSocket.getInetAddress());
+                System.out.println("Dirección: " + clientSocket.getLocalAddress());
                 System.out.println("Puerto: " + clientSocket.getPort());
 
                 InputStream inputStream = clientSocket.getInputStream();
@@ -24,6 +24,9 @@ public class JsonServer {
                     String jsonString = new String(buffer, 0, bytesRead);
                     System.out.println("Mensaje JSON recibido: " + jsonString);
                 }
+
+                String response = "\u001B[32m" + "Mensaje recibido" + "\u001B[0m";
+                clientSocket.getOutputStream().write(response.getBytes());
 
                 clientSocket.close();
             }
