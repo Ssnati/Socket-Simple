@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73a6f9bc-ade4-4e74-946a-f85aabbcde76" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/data/Persons.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/gson-2.10.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/gson-2.10.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JsonClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JsonClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +56,7 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ADMIN\Documents\Intellj Project\6 Semestre\Socket-Transmision-Distribuidos\out" />
       <recent name="C:\Users\ADMIN\Documents\Intellj Project\6 Semestre\Socket-Transmision-Distribuidos\lib" />
       <recent name="C:\Users\ADMIN\Documents\Intellj Project\6 Semestre\Socket-Transmision\src\lib" />
       <recent name="C:\Users\ADMIN\Documents\Intellj Project\6 Semestre\Socket-Transmision\src" />
@@ -99,7 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1708028560051</updated>
       <workItem from="1708028561093" duration="6200000" />
-      <workItem from="1708635139395" duration="154000" />
+      <workItem from="1708635139395" duration="590000" />
     </task>
     <servers />
   </component>

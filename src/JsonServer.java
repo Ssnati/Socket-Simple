@@ -1,3 +1,6 @@
+import jdk.jshell.execution.Util;
+import utils.Utils;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.ServerSocket;
@@ -7,8 +10,8 @@ public class JsonServer {
     public static void main(String[] args) {
         try {
             ServerSocket serverSocket = new ServerSocket(12500);
-            System.out.println("\u001B[32m" + "Servidor esperando conexiones...");
-            System.out.println("\u001B[0m");
+            System.out.println(Utils.CYANMESSAGE + "Servidor esperando conexiones...");
+            System.out.println(Utils.RESET);
 
             while (true) {
                 Socket clientSocket = serverSocket.accept();
@@ -25,15 +28,15 @@ public class JsonServer {
                     System.out.println("Mensaje JSON recibido: " + jsonString);
                 }
 
-                String response = "\u001B[32m" + "Mensaje recibido" + "\u001B[0m";
+                String response = Utils.GREENMESSAGE + "Mensaje recibido" + Utils.RESET;
                 clientSocket.getOutputStream().write(response.getBytes());
 
                 clientSocket.close();
             }
         } catch (IOException e) {
-            System.out.println("\u001B[31m" + "Error: " + e.getMessage());
+            System.out.println(Utils.REDMESSAGE + "Error: " + e.getMessage());
             e.printStackTrace();
-            System.out.println("\u001B[0m");
+            System.out.println(Utils.RESET);
         }
     }
 }

@@ -1,12 +1,7 @@
 import com.google.gson.Gson;
+import utils.Utils;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
+import java.io.*;
 import java.net.Socket;
 
 public class JsonClient {
@@ -23,7 +18,7 @@ public class JsonClient {
             OutputStream outputStream = socket.getOutputStream();
             Writer writer = new OutputStreamWriter(outputStream);
             writer.write(jsonString);
-            writer.write("\n"); // Agregar nueva línea para indicar el final del mensaje
+            writer.write("\n");
             writer.flush();
 
             System.out.println("Mensaje JSON enviado al servidor.");
@@ -32,10 +27,9 @@ public class JsonClient {
             
             socket.close();
         } catch (IOException e) {
-            //Colocar color rojo
-            System.out.println("\u001B[31m" + "Error: " + e.getMessage());
+            System.out.println(Utils.REDMESSAGE + "Error: " + e.getMessage());
             e.printStackTrace();
-            System.out.println("\u001B[0m");
+            System.out.println(Utils.RESET);
         }
     }
 }
