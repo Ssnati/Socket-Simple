@@ -1,4 +1,3 @@
-import jdk.jshell.execution.Util;
 import utils.Utils;
 
 import java.io.IOException;
@@ -14,24 +13,33 @@ public class JsonServer {
             System.out.println(Utils.RESET);
 
             while (true) {
-                Socket clientSocket = serverSocket.accept();
-                System.out.println("Cliente conectado desde " + clientSocket.getInetAddress());
-                System.out.println("Dirección: " + clientSocket.getLocalAddress());
-                System.out.println("Puerto: " + clientSocket.getPort());
+                Thread thread = new Thread(() -> {
+                    try {
+                        Socket clientSocket = serverSocket.accept();
+                        System.out.println("Cliente conectado desde " + clientSocket.getInetAddress());
+                        System.out.println("Dirección: " + clientSocket.getLocalAddress());
+                        System.out.println("Puerto: " + clientSocket.getPort());
 
-                InputStream inputStream = clientSocket.getInputStream();
-                byte[] buffer = new byte[1024];
-                int bytesRead = inputStream.read(buffer);
+                        InputStream inputStream = clientSocket.getInputStream();
+                        byte[] buffer = new byte[1024];
+                        int bytesRead = inputStream.read(buffer);
 
-                if (bytesRead != -1) {
-                    String jsonString = new String(buffer, 0, bytesRead);
-                    System.out.println("Mensaje JSON recibido: " + jsonString);
-                }
+                        if (bytesRead != -1) {
+                            String jsonString = new String(buffer, 0, bytesRead);
+                            System.out.println("Mensaje JSON recibido: " + jsonString);
+                        }
 
-                String response = Utils.GREENMESSAGE + "Mensaje recibido" + Utils.RESET;
-                clientSocket.getOutputStream().write(response.getBytes());
+                        String response = Utils.GREENMESSAGE + "Mensaje recibido" + Utils.RESET;
+                        clientSocket.getOutputStream().write(response.getBytes());
 
-                clientSocket.close();
+
+                    } catch (IOException e) {
+                        System.out.println(Utils.REDMESSAGE + "Error: " + e.getMessage());
+                        e.printStackTrace();
+                        System.out.println(Utils.RESET);
+                    }
+                });
+                thread.start();
             }
         } catch (IOException e) {
             System.out.println(Utils.REDMESSAGE + "Error: " + e.getMessage());
