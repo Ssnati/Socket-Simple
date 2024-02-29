@@ -10,6 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73a6f9bc-ade4-4e74-946a-f85aabbcde76" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/manager/ManagerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager/ManagerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/JsonClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/JsonClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/JsonServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/JsonServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +136,7 @@
       <workItem from="1709075038429" duration="898000" />
       <workItem from="1709076684119" duration="3226000" />
       <workItem from="1709080096353" duration="192000" />
-      <workItem from="1709220281069" duration="9584000" />
+      <workItem from="1709220281069" duration="11796000" />
     </task>
     <servers />
   </component>
@@ -150,5 +153,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/manager/ManagerMain.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

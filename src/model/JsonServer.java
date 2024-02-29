@@ -9,10 +9,10 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class JsonServer {
-    public void startServer() {
+    public void startServer(int port) {
         try {
             InetAddress localMachine = InetAddress.getLocalHost();
-            ServerSocket serverSocket = new ServerSocket(12500);
+            ServerSocket serverSocket = new ServerSocket(port);
             System.out.println(Utils.GREEN + "IP: " + localMachine.getHostAddress());
             System.out.println(Utils.GREEN + "PUERTO: " + serverSocket.getLocalPort());
             System.out.println(Utils.CYAN + "Servidor esperando conexiones...");

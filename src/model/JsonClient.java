@@ -14,10 +14,10 @@ public class JsonClient {
         System.out.println(bufferedReader.readLine());
     }
 
-    public void startClient() {
+    public void startClient(String ip, int port) {
         Thread thread = new Thread(() -> {
             try {
-                Socket socket = new Socket("localhost", 12500);
+                Socket socket = new Socket(ip, port);
 
                 //JsonMessage jsonMessage = new JsonMessage("Juan", 25, "EjemploCity");
                 CarrosJson jsonMessage = new CarrosJson("mázdá", 2793, "rx-7", (int) (Math.random() * 1000));
