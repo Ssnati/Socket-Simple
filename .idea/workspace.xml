@@ -10,16 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73a6f9bc-ade4-4e74-946a-f85aabbcde76" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Socket_Transmision_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/manager/ManagerMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/gson_2_10_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/gson_2_10_1__2_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/JsonClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/JsonClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/JsonServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/JsonServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +133,7 @@
       <workItem from="1709075038429" duration="898000" />
       <workItem from="1709076684119" duration="3226000" />
       <workItem from="1709080096353" duration="192000" />
-      <workItem from="1709220281069" duration="9024000" />
+      <workItem from="1709220281069" duration="9584000" />
     </task>
     <servers />
   </component>

@@ -4,13 +4,17 @@ import utils.Utils;
 
 import java.io.DataInputStream;
 import java.io.InputStream;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 public class JsonServer {
     public void startServer() {
         try {
+            InetAddress localMachine = InetAddress.getLocalHost();
             ServerSocket serverSocket = new ServerSocket(12500);
+            System.out.println(Utils.GREEN + "IP: " + localMachine.getHostAddress());
+            System.out.println(Utils.GREEN + "PUERTO: " + serverSocket.getLocalPort());
             System.out.println(Utils.CYAN + "Servidor esperando conexiones...");
             System.out.println(Utils.RESET);
             while (true) {
