@@ -1,11 +1,31 @@
 package utils;
 
 public class Utils {
-    public static final String REDMESSAGE = "\033[31m";
-    public static final String GREENMESSAGE = "\033[32m";
-    public static final String RESET = "\u001B[0m";
-    public static final String PURPLEMESSAGE = "\033[35m";
-    public static final String YELLOWMESSAGE = "\033[33m";
-    public static final String BLUEMESSAGE = "\033[34m";
-    public static final String CYANMESSAGE = "\033[36m";
+    // Reset
+    public static final String RESET = "\033[0m";  // Text Reset
+
+    // Colores de texto
+    public static final String BLACK = "\033[0;30m";   // Negro
+    public static final String RED = "\033[0;31m";     // Rojo
+    public static final String GREEN = "\033[0;32m";   // Verde
+    public static final String YELLOW = "\033[0;33m";  // Amarillo
+    public static final String BLUE = "\033[0;34m";    // Azul
+    public static final String PURPLE = "\033[0;35m";  // Morado
+    public static final String CYAN = "\033[0;36m";    // Cyan
+    public static final String WHITE = "\033[0;37m";   // Blanco
+
+    // Estilos de texto
+    public static final String BOLD = "\033[1m";       // Texto en negrita
+    public static final String UNDERLINE = "\033[4m";  // Texto subrayado
+    public static final String REVERSED = "\033[7m";   // Colores invertidos
+
+    // Colores de fondo
+    public static final String BG_BLACK = "\033[40m";   // Negro
+    public static final String BG_RED = "\033[41m";     // Rojo
+    public static final String BG_GREEN = "\033[42m";   // Verde
+    public static final String BG_YELLOW = "\033[43m";  // Amarillo
+    public static final String BG_BLUE = "\033[44m";    // Azul
+    public static final String BG_PURPLE = "\033[45m";  // Morado
+    public static final String BG_CYAN = "\033[46m";    // Cyan
+    public static final String BG_WHITE = "\033[47m";   // Blanco
 }

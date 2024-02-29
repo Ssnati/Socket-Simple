@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Socket-Transmision:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Socket_Transmision_jar</output-path>
+    <root id="archive" name="Socket-Transmision.jar">
+      <element id="module-output" name="Socket-Transmision" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/gson-2.10.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

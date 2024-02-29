@@ -8,10 +8,10 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class JsonServer {
-    public static void main(String[] args) {
+    public void startServer() {
         try {
             ServerSocket serverSocket = new ServerSocket(12500);
-            System.out.println(Utils.CYANMESSAGE + "Servidor esperando conexiones...");
+            System.out.println(Utils.CYAN + "Servidor esperando conexiones...");
             System.out.println(Utils.RESET);
             while (true) {
                 Thread thread = new Thread(() -> {
@@ -26,14 +26,14 @@ public class JsonServer {
 
                         String jsonString = reader.readUTF();
 
-                        System.out.println("Mensaje JSON recibido: " + Utils.GREENMESSAGE + jsonString);
+                        System.out.println("Mensaje JSON recibido: " + Utils.GREEN + jsonString);
                         System.out.println(Utils.RESET);
 
-                        String response = Utils.PURPLEMESSAGE + "Mensaje recibido en el servidor " + Utils.RESET;
+                        String response = Utils.PURPLE + "Mensaje recibido en el servidor " + Utils.RESET;
                         clientSocket.getOutputStream().write(response.getBytes());
 
                     } catch (Exception e) {
-                        System.out.println(Utils.REDMESSAGE + "Error: " + e.getMessage());
+                        System.out.println(Utils.RED + "Error: " + e.getMessage());
                         e.printStackTrace();
                         System.out.println(Utils.RESET);
                     }
@@ -41,7 +41,7 @@ public class JsonServer {
                 thread.start();
             }
         } catch (Exception e) {
-            System.out.println(Utils.REDMESSAGE + "Error: " + e.getMessage());
+            System.out.println(Utils.RED + "Error: " + e.getMessage());
             e.printStackTrace();
             System.out.println(Utils.RESET);
         }
