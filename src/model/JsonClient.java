@@ -1,4 +1,7 @@
+package model;
+
 import com.google.gson.Gson;
+import pojo.CarrosJson;
 import utils.Utils;
 
 import java.io.*;
@@ -11,7 +14,7 @@ public class JsonClient {
                 try {
                     Socket socket = new Socket("localhost", 12500);
 
-                    //JsonMessage jsonMessage = new JsonMessage("Juan", 25, "EjemploCity");
+                    //pojo.JsonMessage jsonMessage = new pojo.JsonMessage("Juan", 25, "EjemploCity");
                     CarrosJson jsonMessage = new CarrosJson("mázdá", 2793, "rx-7", (int) (Math.random() * 1000));
 
                     Gson gson = new Gson();

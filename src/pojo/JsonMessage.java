@@ -1,3 +1,5 @@
+package pojo;
+
 public class JsonMessage {
     private String nombre;
     private int edad;

@@ -1,3 +1,5 @@
+package pojo;
+
 public class CarrosJson {
     private String marca;
     private int placa;
@@ -13,7 +15,7 @@ public class CarrosJson {
 
     @Override
     public String toString() {
-        return "JsonMessage{" +
+        return "CarrosJson{" +
                 "marca='" + marca + '\'' +
                 ", placa=" + placa +
                 ", modelo='" + modelo + '\'' +

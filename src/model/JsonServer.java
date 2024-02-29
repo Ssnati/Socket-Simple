@@ -1,3 +1,5 @@
+package model;
+
 import utils.Utils;
 
 import java.io.DataInputStream;
