@@ -1,6 +1,6 @@
 import utils.Utils;
 
-import java.io.IOException;
+import java.io.DataInputStream;
 import java.io.InputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -11,7 +11,6 @@ public class JsonServer {
             ServerSocket serverSocket = new ServerSocket(12500);
             System.out.println(Utils.CYANMESSAGE + "Servidor esperando conexiones...");
             System.out.println(Utils.RESET);
-
             while (true) {
                 Thread thread = new Thread(() -> {
                     try {
@@ -21,19 +20,17 @@ public class JsonServer {
                         System.out.println("Puerto: " + clientSocket.getPort());
 
                         InputStream inputStream = clientSocket.getInputStream();
-                        byte[] buffer = new byte[1024];
-                        int bytesRead = inputStream.read(buffer);
+                        DataInputStream reader = new DataInputStream(inputStream);
 
-                        if (bytesRead != -1) {
-                            String jsonString = new String(buffer, 0, bytesRead);
-                            System.out.println("Mensaje JSON recibido: " + jsonString);
-                        }
+                        String jsonString = reader.readUTF();
 
-                        String response = Utils.GREENMESSAGE + "Mensaje recibido" + Utils.RESET;
+                        System.out.println("Mensaje JSON recibido: " + Utils.GREENMESSAGE + jsonString);
+                        System.out.println(Utils.RESET);
+
+                        String response = Utils.PURPLEMESSAGE + "Mensaje recibido en el servidor " + Utils.RESET;
                         clientSocket.getOutputStream().write(response.getBytes());
 
-
-                    } catch (IOException e) {
+                    } catch (Exception e) {
                         System.out.println(Utils.REDMESSAGE + "Error: " + e.getMessage());
                         e.printStackTrace();
                         System.out.println(Utils.RESET);
@@ -41,7 +38,7 @@ public class JsonServer {
                 });
                 thread.start();
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
             System.out.println(Utils.REDMESSAGE + "Error: " + e.getMessage());
             e.printStackTrace();
             System.out.println(Utils.RESET);
