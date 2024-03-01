@@ -2,19 +2,16 @@ package model;
 
 import utils.Utils;
 
-import java.io.DataInputStream;
-import java.io.InputStream;
-import java.net.InetAddress;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.net.SocketException;
+import java.io.*;
+import java.net.*;
 
 public class JsonServer {
     public void startServer(int port) {
         try {
             InetAddress localMachine = InetAddress.getLocalHost();
             ServerSocket serverSocket = new ServerSocket(port);
-            System.out.println(Utils.GREEN + "IP: " + localMachine.getHostAddress());
+            System.out.println(Utils.GREEN + "IP-LOCAL: " + localMachine.getHostAddress());
+            System.out.println(Utils.GREEN + "IP-PUBLICA: " + getPublicIp());
             System.out.println(Utils.GREEN + "PUERTO: " + serverSocket.getLocalPort());
             System.out.println(Utils.CYAN + "Servidor esperando conexiones...");
             System.out.println(Utils.RESET);
@@ -50,6 +47,16 @@ public class JsonServer {
             System.out.println(Utils.RED + "Error: " + e.getMessage());
             e.printStackTrace();
             System.out.println(Utils.RESET);
+        }
+    }
+
+    private String getPublicIp() throws IOException {
+        URL url = new URL("https://api64.ipify.org?format=text");
+        URLConnection connection = url.openConnection();
+
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
+            return reader.readLine();
+
         }
     }
 
