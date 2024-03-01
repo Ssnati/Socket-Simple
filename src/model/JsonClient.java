@@ -6,43 +6,39 @@ import utils.Utils;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.LinkedList;
+import java.util.List;
 
 public class JsonClient {
-    private static void handleServerResponse(String jsonString, Socket socket) throws IOException {
-        System.out.println("Mensaje JSON enviado al servidor: " + Utils.GREEN + jsonString + Utils.RESET);
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        System.out.println(bufferedReader.readLine());
-    }
+    private DataInputStream dataInputStream;
+    private DataOutputStream dataOutputStream;
 
     public void startClient(String ip, int port) {
-        Thread thread = new Thread(() -> {
-            try {
-                Socket socket = new Socket(ip, port);
-
-                //JsonMessage jsonMessage = new JsonMessage("Juan", 25, "EjemploCity");
-                CarrosJson jsonMessage = new CarrosJson("mázdá", 2793, "rx-7", (int) (Math.random() * 1000));
-
-                Gson gson = new Gson();
-                String jsonString = gson.toJson(jsonMessage);
-
-                OutputStream outputStream = socket.getOutputStream();
-                DataOutputStream writer = new DataOutputStream(outputStream);
-                writer.writeUTF(jsonString);
-
-                handleServerResponse(jsonString, socket);
-
-            } catch (IOException e) {
-                System.out.println(Utils.RED + "Error: " + e.getMessage());
-                e.printStackTrace();
-                System.out.println(Utils.RESET);
-            }
-        });
-        thread.start();
         try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            List<CarrosJson> carList = new CarManager().getCarList();
+            Socket socket = new Socket(ip, port);
+            dataInputStream = new DataInputStream(socket.getInputStream());
+            dataOutputStream = new DataOutputStream(socket.getOutputStream());
+            while (true) {
+                sendMessage(carList);
+                Utils.sleepThread(2);
+            }
+        } catch (IOException e) {
+            System.out.println(Utils.RED + "Error: " + e.getMessage());
+            e.printStackTrace();
+            System.out.println(Utils.RESET);
         }
     }
+
+    private void sendMessage(List<CarrosJson> jsonList) throws IOException {
+        Gson gson = new Gson();
+        dataOutputStream.writeUTF(gson.toJson(jsonList.get((int) (Math.random() * 10))));
+    }
+
+    private void handleServerResponse() throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(dataInputStream));
+        System.out.println(bufferedReader.readLine());
+    }
 }
+
 

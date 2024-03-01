@@ -1,5 +1,7 @@
 package utils;
 
+import javax.swing.text.html.HTMLEditorKit;
+
 public class Utils {
     // Reset
     public static final String RESET = "\033[0m";  // Text Reset
@@ -28,4 +30,14 @@ public class Utils {
     public static final String BG_PURPLE = "\033[45m";  // Morado
     public static final String BG_CYAN = "\033[46m";    // Cyan
     public static final String BG_WHITE = "\033[47m";   // Blanco
+
+    public static void sleepThread(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000L);
+        } catch (InterruptedException e) {
+            System.out.println(Utils.RED + "Error: " + e.getMessage());
+            e.printStackTrace();
+            System.out.println(Utils.RESET);
+        }
+    }
 }

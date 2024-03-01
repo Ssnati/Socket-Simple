@@ -10,10 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73a6f9bc-ade4-4e74-946a-f85aabbcde76" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/model/CarManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/manager/ManagerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager/ManagerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Persons.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Cars.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/JsonClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/JsonClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/JsonServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/JsonServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,25 +46,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="pojo" />
@@ -78,17 +80,11 @@
       <recent name="utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ManagerMain">
-    <configuration name="JsonClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="model.JsonClient" />
+  <component name="RunManager" selected="Application.Client">
+    <configuration name="Client" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="manager.ManagerMain" />
       <module name="Socket-Transmision" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JsonServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="model.JsonServer" />
-      <module name="Socket-Transmision" />
+      <option name="PROGRAM_PARAMETERS" value="client" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -108,15 +104,12 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.JsonClient" />
-      <item itemvalue="Application.JsonServer" />
+      <item itemvalue="Application.Client" />
       <item itemvalue="Application.ManagerMain" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ManagerMain" />
-        <item itemvalue="Application.JsonClient" />
-        <item itemvalue="Application.JsonServer" />
       </list>
     </recent_temporary>
   </component>
@@ -136,7 +129,8 @@
       <workItem from="1709075038429" duration="898000" />
       <workItem from="1709076684119" duration="3226000" />
       <workItem from="1709080096353" duration="192000" />
-      <workItem from="1709220281069" duration="11796000" />
+      <workItem from="1709220281069" duration="13202000" />
+      <workItem from="1709244684269" duration="5774000" />
     </task>
     <servers />
   </component>
@@ -161,6 +155,11 @@
           <url>file://$PROJECT_DIR$/src/manager/ManagerMain.java</url>
           <line>8</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/model/JsonClient.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
