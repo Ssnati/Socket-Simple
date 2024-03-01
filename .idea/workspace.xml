@@ -11,9 +11,11 @@
   <component name="ChangeListManager">
     <list default="true" id="73a6f9bc-ade4-4e74-946a-f85aabbcde76" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Cars.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/CarManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/PersonManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/JsonClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/JsonClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/JsonServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/JsonServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pojo/CarrosJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pojo/CarrosJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pojo/CarrosJson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pojo/JsonMessage.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +130,8 @@
       <workItem from="1709076684119" duration="3226000" />
       <workItem from="1709080096353" duration="192000" />
       <workItem from="1709220281069" duration="13202000" />
-      <workItem from="1709244684269" duration="8593000" />
+      <workItem from="1709244684269" duration="9536000" />
+      <workItem from="1709320026593" duration="2190000" />
     </task>
     <servers />
   </component>
@@ -156,12 +159,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/model/JsonClient.java</url>
-          <line>17</line>
+          <line>19</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/model/JsonClient.java</url>
-          <line>16</line>
+          <line>18</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
