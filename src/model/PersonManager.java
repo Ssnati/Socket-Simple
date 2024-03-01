@@ -1,7 +1,7 @@
 package model;
 
 import com.google.gson.Gson;
-import pojo.CarrosJson;
+import pojo.Person;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -10,10 +10,10 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
-public class CarManager {
-    private List<CarrosJson> carList;
+public class PersonManager {
+    private List<Person> carList;
 
-    public CarManager() {
+    public PersonManager() {
         carList = new LinkedList<>();
         try {
             loadData();
@@ -25,11 +25,11 @@ public class CarManager {
     }
 
     private void loadData() throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader("data/Cars.json"));
+        BufferedReader reader = new BufferedReader(new FileReader("data/Perosn.json"));
         String data = readAllData(reader);
         Gson gson = new Gson();
-        CarrosJson[] carFromJson = gson.fromJson(data, CarrosJson[].class);
-        carList = List.of(carFromJson);
+        Person[] personFromJson = gson.fromJson(data, Person[].class);
+        carList = List.of(personFromJson);
     }
 
     private String readAllData(BufferedReader reader) throws IOException {
@@ -41,7 +41,7 @@ public class CarManager {
         return allData.toString();
     }
 
-    public List<CarrosJson> getCarList() {
+    public List<Person> getPersonList() {
         return carList;
     }
 
