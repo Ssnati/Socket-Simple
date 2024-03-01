@@ -4,8 +4,9 @@ import com.google.gson.Gson;
 import pojo.Person;
 import utils.Utils;
 
-import java.io.*;
-import java.net.InetAddress;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
 import java.net.Socket;
 import java.util.List;
 
@@ -34,7 +35,7 @@ public class JsonClient {
         Gson gson = new Gson();
         Person persona = jsonList.get((int) (Math.random() * 10));
         dataOutputStream.writeUTF(gson.toJson(persona));
-        System.out.println(Utils.BLUE + "Mensaje enviado : " + persona.getName() + " " + persona.getLastName() + " " + persona.getDateBirth() + " " + persona.getBornIn() + " " + persona.getRandomNumber() + " " + InetAddress.getLocalHost().getHostName()+ Utils.RESET);
+        System.out.println(Utils.BLUE + "Mensaje enviado : " + persona.getName() + " " + persona.getLastName() + " " + persona.getDateBirth() + " " + persona.getBornIn().getName() + "-" + persona.getBornIn().getDaneCode() + " " + persona.getRandomNumber() + " " + persona.getNameClient() + Utils.RESET);
     }
 
 }
