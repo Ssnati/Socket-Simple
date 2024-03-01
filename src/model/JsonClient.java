@@ -6,7 +6,6 @@ import utils.Utils;
 
 import java.io.*;
 import java.net.Socket;
-import java.util.LinkedList;
 import java.util.List;
 
 public class JsonClient {
@@ -21,7 +20,7 @@ public class JsonClient {
             dataOutputStream = new DataOutputStream(socket.getOutputStream());
             while (true) {
                 sendMessage(carList);
-                Utils.sleepThread(2);
+                Utils.sleepThread(30);
             }
         } catch (IOException e) {
             System.out.println(Utils.RED + "Error: " + e.getMessage());
@@ -32,13 +31,11 @@ public class JsonClient {
 
     private void sendMessage(List<CarrosJson> jsonList) throws IOException {
         Gson gson = new Gson();
-        dataOutputStream.writeUTF(gson.toJson(jsonList.get((int) (Math.random() * 10))));
+        CarrosJson car = jsonList.get((int) (Math.random() * 10));
+        dataOutputStream.writeUTF(gson.toJson(car));
+        System.out.println(Utils.BLUE + "Mensaje enviado : " + car.getModelo() + " " + car.getPlaca() + Utils.RESET);
     }
 
-    private void handleServerResponse() throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(dataInputStream));
-        System.out.println(bufferedReader.readLine());
-    }
 }
 
 
